@@ -17,7 +17,6 @@
 
 <!-- post-paginator -->
 <div class="post-nav">
-
 <% if (page.prev){ %>
 <div>Next: <a class="prev-post" href="<%- url_for(page.prev.path) %>"><%- page.prev.title || '[Untitled Post]' %></a></div>
 <% } %>
@@ -25,6 +24,5 @@
 <% if (page.next){ %>
 <div>Prev: <a class="next-post" href="<%- url_for(page.next.path) %>"><%- page.next.title || '[Untitled Post]' %></a></div>
 <% } %>
-
 </div><!-- /.post-nav -->
 
