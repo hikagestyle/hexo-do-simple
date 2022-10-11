@@ -1,0 +1,19 @@
+
+<h1><%=page.tag%></h1>
+
+<p><%=page.tag%>:<%=page.current%>ページ</p>
+
+  <% page.posts.each(article => { %>
+    <div class="tag-item">
+      <a href="<%=url_for(article.path)%>">
+        <%=article.title%>
+      </a>
+      <time datetime="<%=date_xml(article.date)%>">
+        <%=date(article.date)%>
+      </time>
+    </div><!-- /.tag-item -->
+  <% }) %>
+
+<div id="paginator">
+  <%-paginator()%>
+</div><!-- #paginator -->

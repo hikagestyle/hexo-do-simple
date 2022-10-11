@@ -1,0 +1,30 @@
+
+<h1><%=page.title%></h1>
+<%-page.content%>
+
+<% if (page.categories && page.categories.length) { %>
+<div class="post-categories">
+<%- list_categories(page.categories, {class: 'category', show_count: false, style: false}) %>
+</div><!-- /.post-categories -->
+<% } %>
+
+<% if (page.tags && page.tags.length){ %>
+<div class="post-tags">
+<%- list_tags(page.tags, {class: 'tag', show_count: false, style: false}) %>
+</div><!-- /.post-tags -->
+<% } %>
+
+
+<!-- post-paginator -->
+<div class="post-nav">
+
+<% if (page.prev){ %>
+<div>Next: <a class="prev-post" href="<%- url_for(page.prev.path) %>"><%- page.prev.title || '[Untitled Post]' %></a></div>
+<% } %>
+
+<% if (page.next){ %>
+<div>Prev: <a class="next-post" href="<%- url_for(page.next.path) %>"><%- page.next.title || '[Untitled Post]' %></a></div>
+<% } %>
+
+</div><!-- /.post-nav -->
+

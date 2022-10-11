@@ -1,0 +1,14 @@
+
+<% if (is_home()) { %>
+<%-partial('partials/home')%>
+<% } else { %>
+<%-partial('partials/recent-posts')%>
+<% } %>
+
+<% if (is_home()) { %>
+<% } else { %>
+<div id="paginator">
+  <%-paginator()%>
+</div><!-- #paginator -->
+<% } %>
+

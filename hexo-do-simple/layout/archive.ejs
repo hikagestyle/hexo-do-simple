@@ -1,0 +1,55 @@
+
+<%
+const categoriesList = list_categories({ show_count: true });
+const tagsList = list_tags({ show_count: true });
+const archivesList = list_archives({ format: "YYYY-MM",show_count: true });
+%>
+
+<% if (is_year() === false) { %>
+<h1>Archives</h1>
+
+<% if (categoriesList !== "") { %>
+<div class="archive">
+<h2>Categories</h2>
+<%-categoriesList%>
+</div><!-- /.archive -->
+<% } %>
+
+<% if (tagsList !== "") { %>
+<div class="archive">
+<h2>Tags</h2>
+<%-tagsList%>
+</div><!-- /.archive -->
+<% } else { %>
+<% } %>
+
+<% if (archivesList !== "") { %>
+<div class="archive">
+<h2>Date Archives</h2>
+<%-archivesList%>
+</div><!-- /.archive -->
+<% } else { %>
+<% } %>
+
+<% } else { %>
+
+<h1><%=page.year + '/' + page.month%></h1>
+
+<p><%=page.year%>年<%=page.month%>月:<%=page.current%>ページ</p>
+
+<% page.posts.each(article => { %>
+<div class="archive-item">
+<a href="<%=url_for(article.path)%>">
+<%=article.title%>
+</a>
+<time datetime="<%=date_xml(article.date)%>">
+<%=date(article.date)%>
+</time>
+</div><!-- /.archive-item -->
+<% }) %>
+
+<div id="paginator">
+  <%-paginator()%>
+</div><!-- #paginator -->
+
+<% } %>
