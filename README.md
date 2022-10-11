@@ -29,3 +29,8 @@ generator-hexo-theme から表示させたいことを組み合わせて作成�
 - [generator-hexo-theme](https://github.com/tcrowe/generator-hexo-theme)
 
 大雑把なやっつけテーマです。（2022-10-12）
+
+
+## デモサイト
+
+[Hexo Demo](https://hexo-do-simple.netlify.app/)
