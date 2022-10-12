@@ -31,6 +31,11 @@ generator-hexo-theme から表示させたいことを組み合わせて作成�
 大雑把なやっつけテーマです。（2022-10-12）
 
 
+## License
+
+MIT
+
+
 ## デモサイト
 
 [Hexo Demo](https://hexo-do-simple.netlify.app/)
