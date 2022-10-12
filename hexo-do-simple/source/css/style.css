@@ -73,8 +73,7 @@ table th{background:#eee;}
 
 #archive h2:first-child{margin-top:0;}
 
-.post-nav{margin:2rem 0;}
-.post-nav div{padding:0.5rem 1rem;background:#eee;}
+.post-nav{margin:2rem 0 0 0;padding:1rem;background:#eee;}
 
 #paginator{margin-top:2rem;padding:1rem;background:#eee;}
 .page-number{padding:1rem;}
