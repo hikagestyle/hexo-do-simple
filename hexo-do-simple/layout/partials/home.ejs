@@ -6,10 +6,10 @@
 
 <% page.posts.sort('date', -1).limit(10).each(post => { %>
 <div class="recent-post-item">
-<a href="<%=url_for(post.path)%>"><%=post.title%></a>
 <time datetime="<%=post.date.toJSON()%>">
 <%=date(post.date)%>
 </time>
+<a href="<%=url_for(post.path)%>"><%=post.title%></a>
 </div><!-- /.recent-posts-item -->
 <% }); %>
 
@@ -37,11 +37,4 @@
 
 <li><a href="https://purecss.io/" target="_blank" rel="nofollow noopener noreferrer">Pure</a></li>
 </ul>
-
-
-<h2>テーマのリポジトリ</h2>
-
-<p>シンプルなHexoの自作テーマ。GitHubに置いておきます。</p>
-
-<p><a href="https://github.com/hikagestyle/hexo-do-simple" target="_blank" rel="nofollow noopener noreferrer">hexo-do-simple</a></p>
 

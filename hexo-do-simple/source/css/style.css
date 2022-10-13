@@ -48,6 +48,7 @@ footer{margin-top:2rem;}
 .m0{margin:0;}
 .p0{padding:0;}
 
+
 .content h1:first-child,
 aside h2:first-child{margin-top:0;}
 
@@ -71,13 +72,18 @@ table th,table td{border:1px solid #ccc;padding:1% 2%;}
 table th{background:#eee;}
 
 
+.recent-post-item,
+.category-item,
+.tag-item,
+.archive-item
+{margin-bottom:1rem;}
+
 #archive h2:first-child{margin-top:0;}
 
 .post-nav{margin:2rem 0 0 0;padding:1rem;background:#eee;}
 
 #paginator{margin-top:2rem;padding:1rem;background:#eee;}
 .page-number{padding:1rem;}
-
 
 .category-list-count:before,
 .tag-list-count:before,

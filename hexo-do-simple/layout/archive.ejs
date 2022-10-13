@@ -6,6 +6,8 @@ const archivesList = list_archives({ format: "YYYY-MM",show_count: true });
 %>
 
 <% if (is_year() === false) { %>
+<div id="archive">
+
 <h1>Archives</h1>
 
 <% if (categoriesList !== "") { %>
@@ -15,6 +17,7 @@ const archivesList = list_archives({ format: "YYYY-MM",show_count: true });
 </div><!-- /.archive -->
 <% } %>
 
+
 <% if (tagsList !== "") { %>
 <div class="archive">
 <h2>Tags</h2>
@@ -22,6 +25,7 @@ const archivesList = list_archives({ format: "YYYY-MM",show_count: true });
 </div><!-- /.archive -->
 <% } else { %>
 <% } %>
+
 
 <% if (archivesList !== "") { %>
 <div class="archive">
@@ -31,6 +35,7 @@ const archivesList = list_archives({ format: "YYYY-MM",show_count: true });
 <% } else { %>
 <% } %>
 
+</div><!-- #archive -->
 <% } else { %>
 
 <h1><%=page.year + '/' + page.month%></h1>
@@ -39,17 +44,18 @@ const archivesList = list_archives({ format: "YYYY-MM",show_count: true });
 
 <% page.posts.each(article => { %>
 <div class="archive-item">
-<a href="<%=url_for(article.path)%>">
-<%=article.title%>
-</a>
 <time datetime="<%=date_xml(article.date)%>">
 <%=date(article.date)%>
 </time>
+<a href="<%=url_for(article.path)%>">
+<%=article.title%>
+</a>
 </div><!-- /.archive-item -->
 <% }) %>
 
 <div id="paginator">
-  <%-paginator()%>
+<%-paginator()%>
 </div><!-- #paginator -->
 
 <% } %>
+

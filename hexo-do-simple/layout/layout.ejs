@@ -39,9 +39,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 <% } else if(is_post()){ %>
 <body class="post">
 <% } else if(is_archive()){ %>
-<body class="archive">
-<% } else if(page.layout === "404") { %>
-<body class="404">
+<body class="archive-page">
 <% } else { %>
 <body class="page">
 <% } %>
@@ -56,7 +54,9 @@ pageTitle += ' [ ' + config.title + ' ]';
 <p class="site-description"><%=config.description%></p>
 </header>
 
+
 <div class="site-img"><img src="/img/site-img.jpg" alt="<%=config.title%>"></div>
+
 
 <nav class="menu">
 <% Object.keys(theme.menu).forEach(key => { %>

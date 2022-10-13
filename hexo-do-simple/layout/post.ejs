@@ -1,6 +1,15 @@
 
+<article id="post">
 <h1><%=page.title%></h1>
+
+<% if (page.updated.format) { %>
+<div class="date updated"><time datetime="<%=page.updated.format("YYYY-MM-DD")%>"><%=page.updated.format("YYYY-MM-DD")%></time></div>
+<% } else { %>
+<div class="date published"><time datetime="<%=page.date.format("YYYY-MM-DD")%>"><%=page.date.format("YYYY-MM-DD")%></time></div>
+<% } %>
+
 <%-page.content%>
+</article><!-- #post -->
 
 <% if (page.categories && page.categories.length) { %>
 <div class="post-categories">
