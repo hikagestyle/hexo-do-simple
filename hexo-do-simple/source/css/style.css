@@ -12,8 +12,10 @@ a:focus,*:focus{outline:none;}
 a{}
 a:hover{text-decoration:none;color:#c33;}
 header a{text-decoration:none;}
+/*
 header a:hover{color:#06f;}
-/*	.pure-button:hover{color:inherit;}	*/
+.pure-button:hover{color:inherit;}
+*/
 
 iframe{max-width:100%;border:none;outline:none;}
 img{max-width:100%;height:auto;}
@@ -23,9 +25,9 @@ figcaption{font-size:.8rem;color:#666;font-style:italic;}
 
 pre,code,cite{font-style:normal;font-size:.875rem;font-family:monospace;}
 pre{line-height:1.6;max-width:100%;overflow:auto;}
-pre{padding:1rem;color:#fff;background:#555;}
+pre{padding:1rem;color:#eee;background:#333;}
 code{padding:.2rem;color:#060;background:#eee;}
-pre > code{padding:0;color:inherit;color:#ffc;background:inherit;}
+pre > code{padding:0;color:inherit;background:inherit;}
 .highlight code{background:inherit;}
 
 .site-title{font-size:1.5rem;font-weight:bold;}
@@ -52,6 +54,7 @@ footer{margin-top:2rem;}
 .content h1:first-child,
 aside h2:first-child{margin-top:0;}
 
+.mt3,
 .content h1,
 .content h2,
 .content h3,
@@ -99,5 +102,5 @@ content: ")";
 
 
 @media (max-width: 64rem) {
-body{max-width:40rem;margin:0 auto;}
+body{width:80%;}
 }

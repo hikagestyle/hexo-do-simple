@@ -23,8 +23,7 @@
 </div><!-- /.post-tags -->
 <% } %>
 
-<% if (page.prev === undefined && page.next === undefined) { %>
-<% } else { %>
+<% if (page.prev || page.next) { %>
 <!-- post-paginator -->
 <div class="post-nav">
 <% if (page.prev){ %>
