@@ -17,11 +17,11 @@ pageTitle += ' [ ' + config.title + ' ]';
 <% if (config.noindex === 'noindex' || page.noindex === 'noindex') { %><meta name="robots" content="noindex,nofollow"><% } %>
 
 <% if (is_home()) { %>
-<title><%=config.title%></title>
+<title><%= config.title %></title>
 <% if (config.description) { %><meta name="description" content="<%= config.description %>"><% } %>
 <% if (config.keywords) { %><meta name="keywords" content="<%= config.keywords %>"><% } %>
 <% } else { %>
-<title><%=pageTitle%></title>
+<title><%= pageTitle %></title>
 <% if (page.description) { %><meta name="description" content="<%= page.description %>"><% } %>
 <% if (page.keywords) { %><meta name="keywords" content="<%= page.keywords %>"><% } %>
 <% } %>
@@ -31,9 +31,9 @@ pageTitle += ' [ ' + config.title + ' ]';
 
 <%- css('/css/style.css') %>
 
-<link rel="icon" href="/img/favicon.ico" type="image/png">
-<link rel="icon" href="/img/apple-touch-icon.png" type="image/png">
-<link rel="icon" href="/img/android-chrome-192x192.png" type="image/png">
+<link rel="icon" href="<%= config.root %>img/favicon.ico" type="image/png">
+<link rel="icon" href="<%= config.root %>img/apple-touch-icon.png" type="image/png">
+<link rel="icon" href="<%= config.root %>img/android-chrome-192x192.png" type="image/png">
 
 <!-- <%- feed_tag('atom.xml') %> -->
 <%-partial('partials/_analytics')%>
@@ -56,17 +56,17 @@ pageTitle += ' [ ' + config.title + ' ]';
 
 
 <header>
-<div class="site-title"><a href="<%=config.root%>"><%=config.title%></a></div>
-<p class="site-description"><%=config.description%></p>
+<div class="site-title"><a href="<%= config.root %>"><%= config.title %></a></div>
+<p class="site-description"><%= config.description %></p>
 </header>
 
 
-<div class="site-img"><img src="/img/site-img.jpg" alt="<%=config.title%>"></div>
+<div class="site-img"><img src="<%= config.root %>img/site-img.jpg" alt="<%= config.title %>"></div>
 
 
 <nav class="menu">
 <% Object.keys(theme.menu).forEach(key => { %>
-<a class="pure-button" href="<%=theme.menu[key]%>"><%=key%></a>
+<a class="pure-button" href="<%= config.root %><%= theme.menu[key] %>"><%= key %></a>
 <% }); %>
 </nav>
 
@@ -86,7 +86,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 
 <ul>
 <% Object.keys(theme.sidemenu).forEach(key => { %>
-<li><a href="<%=theme.sidemenu[key]%>"><%=key%></a></li>
+<li><a href="<%= config.root %><%= theme.sidemenu[key] %>"><%= key %></a></li>
 <% }); %>
 </ul>
 </div>
